@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 mb-5">
+  <h1>Overview</h1>
+  <div class="row mb-5">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header text-center">
+          <span class="text-header">Donut Chart</span>
+        </div>
+        <div class="card-body">
+          <div id="donut" style="min-width: 100%;min-height: 50vh;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header text-center">
+          <span class="text-header">Bar Chart</span>
+        </div>
+        <div class="card-body">
+          <div id="bar" style="min-width: 100%;min-height: 50vh;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h1>User List</h1>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th class="table-header">#</th>
+            <th class="table-header">First Name</th>
+            <th class="table-header">Last Name</th>
+            <th class="table-header">User Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data.tableUsers; let i = index">
+            <td>{{ i+1 }}</td>
+            <td>{{ item.firstName }}</td>
+            <td>{{ item.lastName }}</td>
+            <td>{{ item.username }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
